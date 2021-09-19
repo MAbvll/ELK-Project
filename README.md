@@ -9,9 +9,6 @@ The files in this repository were used to configure the network depicted below.
 
 https://github.com/MAbvll/ELK-Project/blob/main/Diagrams/ELK-Project.drawio.pdf
 
-Azure deployment diagram:
-![logo](https://github.com/MAbvll/ELK-Project/blob/main/Diagrams/ELK-Project.drawio.pdf)
-
 
 # Ansible
 These files have been tested and used to generate several containers in the Azure environment.  The listed playbook files are for their respective applications.
@@ -35,6 +32,7 @@ This document contains the following details:
   - Beats in Use
   - Machines Being Monitored
 - How to Use the Ansible Build
+- Sample bash scripts for Linux
 
 
 ### Description of the Topology
@@ -136,3 +134,10 @@ SSH into the control node and follow the steps below:
 - The hosts file needs to be updated with the correct IP addresses under the correct group name.  This group name is specified in the playbook file so that it targets the correct machines.  With regards to Filebeat, the *_filebeat-playbook.yml_* playbook file tells you to install Filebeat on the DVWA containers, whereas the *_filebeat-config.yml_* file specifies the ELK server is where to send the data.
 - Navigate to this URL to confirm that the ELK server is running:  http://20.106.94.43:5601/app/kibana
 
+
+# Linux bash scripts
+
+The links below will provide a few sample bash scripts for use in Linux
+- Create a research directory:  https://github.com/MAbvll/ELK-Project/blob/ffedb2414328fd9751833ecab821d135fa4aadde/Linux/bashStuff.sh
+- Display system information:  https://github.com/MAbvll/ELK-Project/blob/ffedb2414328fd9751833ecab821d135fa4aadde/Linux/sys_info.sh
+- Display system metrics:  https://github.com/MAbvll/ELK-Project/blob/ffedb2414328fd9751833ecab821d135fa4aadde/Linux/system.sh
