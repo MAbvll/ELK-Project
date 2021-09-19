@@ -10,7 +10,7 @@ The files in this repository were used to configure the network depicted below.
 https://github.com/MAbvll/ELK-Project/blob/main/Diagrams/ELK-Project.drawio.pdf
 
 Azure deployment diagram:
-[logo] https://github.com/MAbvll/ELK-Project/blob/main/Diagrams/ELK-Project.drawio.pdf
+![logo](https://github.com/MAbvll/ELK-Project/blob/main/Diagrams/ELK-Project.drawio.pdf)
 
 
 # Ansible
@@ -103,7 +103,7 @@ The playbook implements the following tasks:
    - example:  **_ansible-playbook install-elk.yml_**
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-[logo] https://github.com/MAbvll/ELK-Project/blob/b044a96b0dcbe70a5d109ced6354f734ba8d6faf/Images/docker_ps_output.png
+![logo](https://github.com/MAbvll/ELK-Project/blob/b044a96b0dcbe70a5d109ced6354f734ba8d6faf/Images/docker_ps_output.png)
 
 
 ### Target Machines & Beats
