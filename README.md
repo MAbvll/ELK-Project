@@ -10,7 +10,7 @@ The files in this repository were used to configure the network depicted below.
 https://github.com/MAbvll/ELK-Project/blob/main/Diagrams/ELK-Project.drawio.pdf
 
 Azure deployment diagram:
-![alt text] (https://github.com/MAbvll/ELK-Project/blob/main/Diagrams/ELK-Project.drawio.pdf "Azure container topology")
+[logo] (https://github.com/MAbvll/ELK-Project/blob/main/Diagrams/ELK-Project.drawio.pdf)
 
 
 # Ansible
@@ -86,24 +86,24 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 
-- Step 1:  Install Docker on the jumpbox.  This is done with the command sudo apt install docker.io
-- Step 2:  Install Ansible image in Docker.  This is done with the command sudo docker pull cyberxsecurity/ansible
+- Step 1:  Install Docker on the jumpbox.  This is done with the command **_sudo apt install docker.io_**
+- Step 2:  Install Ansible image in Docker.  This is done with the command **_sudo docker pull cyberxsecurity/ansible_**
 - Step 3:  Launch the Ansible container.  The procedure is as follows:
-  - Run sudo docker container list -a to see the list of available containers.  The name in the last column is the Ansible container name (for example:  awesome_noyce)
-  - Run sudo docker start <container name>
-    - example:  sudo docker start awesome_noyce
-  - Run sudo docker attach <container name>
-    - example:  sudo docker attach awesome_noyce 
-- Step 4:  Edit the hosts and ansible.cfg files located in /etc/ansible
+  - Run **_sudo docker container list -a_** to see the list of available containers.  The name in the last column is the Ansible container name (for example:  awesome_noyce)
+  - Run **_sudo docker start <container name>_**
+    - example:  **_sudo docker start awesome_noyce_**
+  - Run **_sudo docker attach <container name>_**
+    - example:  **_sudo docker attach awesome_noyce_** 
+- Step 4:  Edit the hosts and *ansible.cfg* files located in */etc/ansible*
   - Edit the hosts file to include the IP addresses of your DVWA vms.  
-  - Edit the ansible.cfg file to configure the remote username of the DVWA containers for SSH access.
+  - Edit the *ansible.cfg* file to configure the remote username of the DVWA containers for SSH access.
 - Step 5:  Create and run the Ansible playbook file to configure the DVWA containers.
-  - Playbook file should be created with the '.yml' extension with the relevant information (please see DVWA playbook link for configuation)
-  - Once the playbook is created, run ansible-playbook <playbookname.yml> to configure the container.
-   - example:  ansible-playbook install-elk.yml
+  - Playbook file should be created with the *.yml* extension with the relevant information (please see DVWA playbook link for configuation)
+  - Once the playbook is created, run **_ansible-playbook <playbookname.yml>_** to configure the container.
+   - example:  **_ansible-playbook install-elk.yml_**
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-https://github.com/MAbvll/ELK-Project/blob/b044a96b0dcbe70a5d109ced6354f734ba8d6faf/Images/docker_ps_output.png
+[logo] (https://github.com/MAbvll/ELK-Project/blob/b044a96b0dcbe70a5d109ced6354f734ba8d6faf/Images/docker_ps_output.png)
 
 
 ### Target Machines & Beats
@@ -124,7 +124,7 @@ These Beats allow us to collect the following information from each machine:
 In order to use the DVWA playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the playbook file to /etc/ansible.
+- Copy the playbook file to *_/etc/ansible_*.
 - Update the hosts file to include the following:
  - DVWA container IPs
 - Update the ansible.cfg file to include the following:
@@ -133,6 +133,6 @@ SSH into the control node and follow the steps below:
 
 
 - The playbook file contains the tasks to install the container.  It is located in /etc/ansible and is identified with a *_.yml_* extension.
-- The hosts file needs to be updated with the correct IP addresses under the correct group name.  This group name is specified in the playbook file so that it targets the correct machines.  With regards to Filebeat, the filebeat-playbook.yml playbook file tells you to install Filebeat on the DVWA containers, whereas the filebeat-config.yml file specifies the ELK server is where to send the data.
+- The hosts file needs to be updated with the correct IP addresses under the correct group name.  This group name is specified in the playbook file so that it targets the correct machines.  With regards to Filebeat, the *_filebeat-playbook.yml_* playbook file tells you to install Filebeat on the DVWA containers, whereas the *_filebeat-config.yml_* file specifies the ELK server is where to send the data.
 - Navigate to this URL to confirm that the ELK server is running:  http://20.106.94.43:5601/app/kibana
 
