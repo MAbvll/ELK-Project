@@ -78,6 +78,9 @@ A summary of the access policies in place can be found in the table below.
 | DVWA containers (UCB-Web-1/2)        | Yes                 | 98.37.45.242, 10.0.0.4                | 80 (public), 22 (jumpbox only)  |
 | ELK server (UCB-Project-Elk-Server)  | Yes                 | 98.37.45.242, 10.0.0.4                | 5601 (public), 22 (jumpbox only)|
 
+Connectivity between the two virtual networks is done with virtual network peering in Azure.  This allows the JumpBox and containers to communicate with the ELK server in the other virtual network.
+
+
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually.  By automating the configuration with Ansible, the containers can be configured very quickly in case one or more go down.
