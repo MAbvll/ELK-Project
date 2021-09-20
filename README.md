@@ -7,7 +7,7 @@ https://github.com/MAbvll/ELK-Project
 # Azure diagram
 The files in this repository were used to configure the network depicted below.
 
-https://github.com/MAbvll/ELK-Project/blob/main/Diagrams/ELK-Project.drawio.pdf
+![logo](https://github.com/MAbvll/ELK-Project/blob/088c359899fe8d67c1a92b1a483af9ca974b3edd/Diagrams/ELK-Project.drawio.png)
 
 
 # Ansible
@@ -127,9 +127,9 @@ In order to use the DVWA playbook, you will need to have an Ansible control node
 SSH into the control node and follow the steps below:
 - Copy the playbook file to *_/etc/ansible_*.
 - Update the hosts file to include the following:
- - DVWA container IPs
+  - DVWA container IPs
 - Update the ansible.cfg file to include the following:
- - remote user name for SSH 
+  - remote user name for SSH 
 - Run the DVWA playbook.  Once it is finished, SSH to the new DVWA container and run *_curl localhost/setup.php_* to confirm that the playbook ran correctly.  You should get HTML output from this command.
 
 
