@@ -41,7 +41,8 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available and redundant, in addition to restricting access to the network.  Providing a load balancer ensures that the DVWA containers are protected from DDoS attacks.  The jumpbox acts as a proxy for configuring the containers in the Azure deployment.  In conjunction with restrictive security group policies, this ensures that only the jumpbox has access to the containers on port 22 for configuration.  
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the performance and system events.
+
 - Filebeat collects data about the file system.
 - Metricbeat collects metrics regarding the system (CPU usage, disk space, machine uptime, etc.)
 
