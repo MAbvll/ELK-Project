@@ -79,6 +79,8 @@ A summary of the access policies in place can be found in the table below.
 | DVWA containers (UCB-Web-1/2)        | Yes                 | 98.37.45.242, 10.0.0.4                | 80 (public), 22 (jumpbox only)  |
 | ELK server (UCB-Project-Elk-Server)  | Yes                 | 98.37.45.242, 10.0.0.4                | 5601 (public), 22 (jumpbox only)|
 
+- All other traffic is blocked in the network security groups.
+
 Connectivity between the two virtual networks is done with virtual network peering in Azure.  This allows the JumpBox and containers to communicate with the ELK server in the other virtual network.
 
 
